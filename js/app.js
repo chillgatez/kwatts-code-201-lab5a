@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
     let s = a + b;
-    return [s, 'The sum of '  + a + ' and ' + b + ' is ' + s + '.'];
+    return [s, `The sum of ${a} and ${b} is ${s}.`];
     //`The sum of ${a} and ${b} is ${s}`
         //sum
         //concatenated string -
@@ -54,6 +54,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    let um = sum(a,b)[0];
+    let um2 = sum(um,c)[0];
+    let prod = multiply(a,b)[0];
+    let prod2 = multiply(prod,c)[0];
+    return [um2, prod2, `${a} and ${b} and ${c} sum to ${um2}.`, `The product of ${a} and ${b} and ${c} is ${prod2}.`];
 
 }
 
